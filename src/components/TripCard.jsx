@@ -1,16 +1,21 @@
+import { Link } from "react-router-dom";
 function TripCard({ trip }) {
-    
+
     return (
         <>
-            <div className='card p-1 h-100'>
+            <div className="card">
                 <div className="card-body">
-                    <h4 className="my-2"> {trip.title}</h4>
-                    <p>partenza: {trip.departureDate}</p>
-                    <p>rientro: {trip.arrivalDate}</p>
+                    <h5 className="card-title">{trip.title}</h5>
+                    <h6 className="card-subtitle mb-3 text-body-secondary">{trip.destination}</h6>
+                    <p className="card-text">Partenza:  {trip.departureDate}</p>
+                    <p className="card-text">Rientro:  {trip.arrivalDate}</p>
+                    <div className="row justify-content-center">
+                    <Link className="btn btn-primary">Dettagli</Link>
+                    </div>
                 </div>
             </div>
         </>
-    )
+    );
 };
 
 export default TripCard;
