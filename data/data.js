@@ -125,6 +125,42 @@ const trips = [
         birthDate: "1994-07-12",
         phone: "+39 320 4455667",
         email: "andrea.ferrari@example.com"
+      },
+      {
+        id: 116,
+        firstName: "Chiara",
+        lastName: "Romano",
+        taxCode: "RMNCHR90P18G321L",
+        birthDate: "1990-09-18",
+        phone: "+39 333 7788990",
+        email: "chiara.romano@example.com"
+      },
+      {
+        id: 117,
+        firstName: "Luca",
+        lastName: "Bianchi",
+        taxCode: "BNCLCU85M22H501Z",
+        birthDate: "1985-12-22",
+        phone: "+39 328 4455667",
+        email: "luca.bianchi@example.com"
+      },
+      {
+        id: 118,
+        firstName: "Giulia",
+        lastName: "Ferrari",
+        taxCode: "FRRGLL92T05A794U",
+        birthDate: "1992-11-05",
+        phone: "+39 347 2233445",
+        email: "giulia.ferrari@example.com"
+      },
+      {
+        id: 119,
+        firstName: "Marco",
+        lastName: "Rossi",
+        taxCode: "RSSMRC81L15F205Y",
+        birthDate: "1981-07-15",
+        phone: "+39 320 1122334",
+        email: "marco.rossi@example.com"
       }
     ]
   },
@@ -137,13 +173,58 @@ const trips = [
     cover: "australia.jpg",
     participants: [
       {
-        id: 116,
-        firstName: "Chiara",
-        lastName: "Romano",
-        taxCode: "RMNCHR90P18G321L",
-        birthDate: "1990-09-18",
-        phone: "+39 333 7788990",
-        email: "chiara.romano@example.com"
+        id: 120,
+        firstName: "Elena",
+        lastName: "Verdi",
+        taxCode: "VRDLNE87R27C351X",
+        birthDate: "1987-06-27",
+        phone: "+39 366 5566778",
+        email: "elena.verdi@example.com"
+      },
+      {
+        id: 121,
+        firstName: "Alessandro",
+        lastName: "Moretti",
+        taxCode: "MRTLSS95A10D412K",
+        birthDate: "1995-04-10",
+        phone: "+39 333 8899001",
+        email: "alessandro.moretti@example.com"
+      },
+      {
+        id: 122,
+        firstName: "Sara",
+        lastName: "Conti",
+        taxCode: "CNTSRA93C08E333V",
+        birthDate: "1993-03-08",
+        phone: "+39 388 6677889",
+        email: "sara.conti@example.com"
+      },
+      {
+        id: 123,
+        firstName: "Francesco",
+        lastName: "De Luca",
+        taxCode: "DLCFNC88B21G123W",
+        birthDate: "1988-02-21",
+        phone: "+39 329 5566770",
+        email: "francesco.deluca@example.com"
+      },
+      {
+        id: 124,
+        firstName: "Valentina",
+        lastName: "Galli",
+        taxCode: "GLLVNT97D14H678J",
+        birthDate: "1997-09-14",
+        phone: "+39 348 4455663",
+        email: "valentina.galli@example.com"
+      },
+      {
+        id: 125,
+        firstName: "Davide",
+        lastName: "Ricci",
+        taxCode: "RCCDVD86F02I789M",
+        birthDate: "1986-05-02",
+        phone: "+39 391 2233446",
+        email: "davide.ricci@example.com"
       }
     ]
   }
