@@ -1,13 +1,12 @@
 import { Outlet } from "react-router-dom"
+import Navbar from "../components/Navbar";
 
 function AppLayout() {
 
     return (
         <>
             <header>
-                <div className="container">
-                    <h1 className="my-4" >Boolroad!</h1>
-                </div>
+                <Navbar />
             </header>
 
             <main>
