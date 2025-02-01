@@ -8,6 +8,8 @@ function ShowSingleTrip() {
     const { id } = useParams();
     const navigation = useNavigate()
     const [searchValue, setSearchValue] = useState("");
+
+    const parentAccordionId = "travelersAccordion";
     
     //Funzione per prelevare i partecipanti di un singolo viaggio tramite id
     const getUsersByTripId = (trips, id) => {
@@ -62,7 +64,8 @@ function ShowSingleTrip() {
                             <TravelersAccordion
                                 user={curElem}
                                 key={curElem.id}
-                                index={curElem.id} />
+                                parentId={parentAccordionId}
+                            />
                         )))
                 }
             </section>
