@@ -26,5 +26,4 @@ const TravelersAccordion = ({ user, index }) => {
 };
 
 
-
 export default TravelersAccordion;
