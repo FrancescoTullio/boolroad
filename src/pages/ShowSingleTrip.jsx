@@ -8,7 +8,8 @@ function ShowSingleTrip() {
     const { id } = useParams();
     const navigation = useNavigate()
     const [searchValue, setSearchValue] = useState("");
-
+    
+    //Funzione per prelevare i partecipanti di un singolo viaggio tramite id
     const getUsersByTripId = (trips, id) => {
         let users = [];
         trips.forEach(curElem => {
@@ -19,6 +20,7 @@ function ShowSingleTrip() {
         return users;
     };
 
+    //Funzione per filtrare i partecipanti  tramite nome e cognome di un singolo viaggio
     const getFilterUsers = (users, searchValue) => {
         const searchValueLower = searchValue.toLowerCase();
         return users.filter((curElem) =>
@@ -26,18 +28,16 @@ function ShowSingleTrip() {
             curElem.lastName.toLowerCase().includes(searchValueLower)
         );
     };
-
+    //Invoca le funzioni
     const users = getUsersByTripId(trips, id);
     const filterUsers = getFilterUsers(users, searchValue);
 
-    console.log(filterUsers)
-
-
     return (
         <>
-            <section className="container">
-                <button className="btn btn-primary" onClick={() => { navigation(-1) }}>torna alla pagina dei viaggi</button>
+            <section>
+                <button className="btn mb-3" onClick={() => { navigation(-1) }}>torna alla pagina dei viaggi</button>
                 <h1>Dettagli del viaggio {id}</h1>
+                {/* Barra di ricerca */}
                 <div className="py-3">
                     <label className="form-label" htmlFor="searchUser">Cerca i viaggiatori:</label>
                     <input className="form-control"
@@ -48,7 +48,8 @@ function ShowSingleTrip() {
                         placeholder='Cerca i viaggiatori...'
                         onChange={(event) => { setSearchValue(event.target.value) }} />
                 </div>
-                {/* se l'array filtrato è maggiore di 0 mappa l'array altrimenti li mappa tutti */}
+                {/* Rubrica partecipanti */}
+                <h3 className="py-3">Rubrica partecipanti</h3>
                 {
                     filterUsers.length > 0
                         ? (filterUsers.map((curElem) => (
