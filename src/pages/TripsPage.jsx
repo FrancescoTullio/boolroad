@@ -2,8 +2,6 @@ import trips from "../../data/data"
 import TripCard from "../components/TripCard";
 
 function TripsPage() {
-
-    
     return (
         <>
             <section className="container">
