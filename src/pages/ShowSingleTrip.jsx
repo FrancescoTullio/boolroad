@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function ShowSingleTrip() {
     const { id } = useParams();
-    const navigation = useNavigate()
+    const navigation = useNavigate();
     const [searchValue, setSearchValue] = useState("");
 
     const parentAccordionId = "travelersAccordion";
@@ -30,15 +30,22 @@ function ShowSingleTrip() {
             curElem.lastName.toLowerCase().includes(searchValueLower)
         );
     };
+
     //Invoca le funzioni
     const users = getUsersByTripId(trips, id);
     const filterUsers = getFilterUsers(users, searchValue);
+    console.log(trips)
+    console.log(trips[0].cover);
+    
+    // Trova il viaggio corrente
+    const singleTrip = trips.find((curTrips) => curTrips.id === parseFloat(id));
 
     return (
         <>
             <section>
                 <button className="btn mb-3" onClick={() => { navigation(-1) }}>torna alla pagina dei viaggi</button>
-                <h1>Dettagli del viaggio {id}</h1>
+                <img src={`../../image/${singleTrip.cover}`} alt={trips.title} />
+                <h1>{trips.title}</h1>
                 {/* Barra di ricerca */}
                 <div className="py-3">
                     <label className="form-label" htmlFor="searchUser">Cerca i viaggiatori:</label>

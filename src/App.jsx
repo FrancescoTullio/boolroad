@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ShowSingleTrip from "./pages/ShowSingleTrip";
 import AddTripPage from "./pages/AddTripPage";
 
+
 function App() {
 
   return (

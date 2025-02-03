@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-function TripCard({ trip }) {
 
+function TripCard({ trip }) {
     return (
         <>
             <div className="card">

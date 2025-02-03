@@ -2,6 +2,7 @@ const trips = [
   {
     id: 1,
     title: "Adventure in Japan",
+    slug: "adventure-in-japan",
     destination: "Tokyo, Japan",
     departureDate: "2025-04-10",
     arrivalDate: "2025-04-20",
@@ -19,6 +20,7 @@ const trips = [
     id: 2,
     title: "Safari in Kenya",
     destination: "Nairobi, Kenya",
+    slug: "safari-in-kenya",
     departureDate: "2025-06-15",
     arrivalDate: "2025-06-25",
     cover: "kenya.jpg",
@@ -34,6 +36,7 @@ const trips = [
   {
     id: 3,
     title: "Tour of Thailand",
+    slug: "tour-of-thailand",
     destination: "Bangkok, Thailand",
     departureDate: "2025-09-10",
     arrivalDate: "2025-09-20",
@@ -50,6 +53,7 @@ const trips = [
   {
     id: 4,
     title: "Trip to Australia",
+    slug: "trip-to-australia",
     destination: "Sydney, Australia",
     departureDate: "2025-11-01",
     arrivalDate: "2025-11-15",

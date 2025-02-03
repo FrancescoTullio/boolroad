@@ -11,6 +11,10 @@ function Navbar() {
             title: "Viaggi",
             path: "/trips"
         },
+        {
+            title: "Contattaci",
+            path: "/aboutus"
+        },
     ]
 
     return (
