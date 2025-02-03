@@ -1,32 +1,45 @@
-const contactInfo = [
-    {
-        id: 1,
-        type: "Indirizzo",
-        value: "Via Roma 123, Milano, Italia",
-    },
-    {
-        id: 2,
-        type: "Telefono",
-        value: "+39 012 345 6789",
-    },
-    {
-        id: 3,
-        type: "Email",
-        value: "info@agenziaviaggi.com",
-    },
-    {
-        id: 4,
-        type: "Orari",
-        value: "Lun-Ven: 9:00 - 18:00",
-    },
-];
+import contactInfo from "../../data/footer-array";
 
 function Footer() {
-
+    
+  
     return (
-        <>
-        </>
-    )
-};
-
-export default Footer;
+        <footer className="bg-dark text-white py-2">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-md-4">
+                        <h6 className="my-2" style={{ fontSize: "0.875rem" }}>Contact Info</h6>
+                        <ul className="list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
+                            {contactInfo.slice(0, 3).map((contact) => (
+                                <li key={contact.id} className="mb-1">
+                                    <strong>{contact.type}:</strong> {contact.value}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="col-12 col-md-4">
+                        <h6 className="my-2" style={{ fontSize: "0.875rem" }}>Working Hours</h6>
+                        <ul className="list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
+                            {contactInfo[3].value.map((dayInfo, index) => (
+                                <li key={index} className="mb-1">
+                                    <strong>{dayInfo.day}:</strong> {dayInfo.hours}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="col-12 col-md-4">
+                        <h6 className="my-2" style={{ fontSize: "0.875rem" }}>Follow Us on Social Media</h6>
+                        <ul className="list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
+                            <li><a href="#" className="text-white">Facebook</a></li>
+                            <li><a href="#" className="text-white">Instagram</a></li>
+                            <li><a href="#" className="text-white">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+  }
+  
+  export default Footer;
+  

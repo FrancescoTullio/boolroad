@@ -9,7 +9,7 @@ import AddTripPage from "./pages/AddTripPage";
 
 function App() {
 
-  return (
+  return (             
     <>
       <BrowserRouter>
         <Routes>

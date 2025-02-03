@@ -4,6 +4,7 @@ function TripCard({ trip }) {
     return (
         <>
             <div className="card">
+                <img className="card-img-top" src={`../../image/${trip.cover}`} alt={trip.title} />
                 <div className="card-body">
                     <h5 className="card-title">{trip.title}</h5>
                     <h6 className="card-subtitle mb-3 text-body-secondary">{trip.destination}</h6>

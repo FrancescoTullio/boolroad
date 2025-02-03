@@ -34,7 +34,6 @@ function AddTripPage() {
             };
             setFormValue(newFormValue);
         };
-        console.log(formValue);
     };
 
     const handleSubmit = (event) =>{

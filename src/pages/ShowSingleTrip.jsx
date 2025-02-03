@@ -8,9 +8,8 @@ function ShowSingleTrip() {
     const { id } = useParams();
     const navigation = useNavigate();
     const [searchValue, setSearchValue] = useState("");
-
     const parentAccordionId = "travelersAccordion";
-    
+
     //Funzione per prelevare i partecipanti di un singolo viaggio tramite id
     const getUsersByTripId = (trips, id) => {
         let users = [];
@@ -26,7 +25,7 @@ function ShowSingleTrip() {
     const getFilterUsers = (users, searchValue) => {
         const searchValueLower = searchValue.toLowerCase();
         return users.filter((curElem) =>
-            curElem.firstName.toLowerCase().includes(searchValueLower) || 
+            curElem.firstName.toLowerCase().includes(searchValueLower) ||
             curElem.lastName.toLowerCase().includes(searchValueLower)
         );
     };
@@ -34,17 +33,11 @@ function ShowSingleTrip() {
     //Invoca le funzioni
     const users = getUsersByTripId(trips, id);
     const filterUsers = getFilterUsers(users, searchValue);
-    console.log(trips)
-    console.log(trips[0].cover);
-    
-    // Trova il viaggio corrente
-    const singleTrip = trips.find((curTrips) => curTrips.id === parseFloat(id));
 
     return (
         <>
             <section>
                 <button className="btn mb-3" onClick={() => { navigation(-1) }}>torna alla pagina dei viaggi</button>
-                <img src={`../../image/${singleTrip.cover}`} alt={trips.title} />
                 <h1>{trips.title}</h1>
                 {/* Barra di ricerca */}
                 <div className="py-3">
@@ -60,22 +53,17 @@ function ShowSingleTrip() {
                 {/* Rubrica partecipanti */}
                 <h3 className="py-3">Rubrica partecipanti</h3>
                 {
-                    filterUsers.length > 0
-                        ? (filterUsers.map((curElem) => (
-                            <TravelersAccordion
-                                user={curElem}
-                                key={curElem.id}
-                                index={curElem.id} />
-                        )))
-                        : (users.map((curElem) => (
+                    <div className="accordion" id={parentAccordionId}>
+                        {(filterUsers.length > 0 ? filterUsers : users).map((curElem) => (
                             <TravelersAccordion
                                 user={curElem}
                                 key={curElem.id}
                                 parentId={parentAccordionId}
                             />
-                        )))
+                        ))}
+                    </div>
                 }
-            </section>
+            </section >
         </>
     );
 };
