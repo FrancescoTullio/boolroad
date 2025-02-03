@@ -1,21 +1,36 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import trips from "../../data/data";
 
 function AddTripPage() {
+    // Valori predefiniti per il modulo del viaggio
     const defaultFormValue = {
         title: "",
         destination: "",
         description: "",
         departureDate: "",
         arrivalDate: "",
-        cover: ""
+        cover: "",
+        partecipants: []
     };
 
+    // Valori predefiniti per un partecipante
+    const defaultPartecipantValue = {
+        firstName: "",
+        lastName: "",
+        birthDate: "",
+        taxCode: "",
+        phone: "",
+        email: ""
+    }
+
     const [formValue, setFormValue] = useState(defaultFormValue);
+
+    const [partecipantValue, setPartecipantValue] = useState(defaultPartecipantValue)
+
     const navigation = useNavigate();
 
-
+    // Gestisce i cambiamenti nei campi del modulo del viaggio
     const handleFormData = (event) => {
         const { name, value } = event.target;
 
@@ -36,7 +51,8 @@ function AddTripPage() {
         };
     };
 
-    const handleSubmit = (event) =>{
+    // Gestisce l'invio del modulo del viaggio
+    const handleSubmit = (event) => {
         event.preventDefault();
 
         const newFormData = {
@@ -46,6 +62,35 @@ function AddTripPage() {
         trips.push(newFormData)
         setFormValue(defaultFormValue)
         navigation(-1)
+    };
+
+    // Gestisce i cambiamenti nei campi del modulo del partecipante
+    const handleChangePartecipant = (event) => {
+        const { name, value } = event.target;
+
+        const newPartecipantValue = {
+            ...partecipantValue,
+            [name]: value
+        }
+        setPartecipantValue(newPartecipantValue)
+    }
+
+    // Aggiunge un nuovo partecipante al modulo del viaggio e gli assegna un id 
+    const handleAddPartecipant = () => {
+
+        const newPartecipant = {
+            ...partecipantValue,
+            id: Date.now()
+        };
+
+        setFormValue(prev => ({
+            // Mantiene tutti i valori precedenti del modulo del viaggio
+            ...prev,
+            // Aggiorna l'array dei partecipanti aggiungendo un nuovo partecipante
+            partecipants: [...prev.partecipants, newPartecipant]
+        }));
+
+        setPartecipantValue(defaultPartecipantValue);
     };
 
     return (
@@ -89,7 +134,68 @@ function AddTripPage() {
                     <input name="cover" type="file" className="form-control" id="cover" onChange={handleFormData} />
                 </div>
 
-                <button type="submit" className="btn btn-success">Aggiungi</button>
+                {/* PARTECIPANT FORM SECTION */}
+                <h2 className="my-4">Aggiungi partecipanti:</h2>
+
+                <div className="row row-cols-1 row-cols-2">
+                    <div className="my-2">
+                        <div className="mb-3">
+                            <label htmlFor="firstName" className="form-label">Nome</label>
+                            <input name="firstName" type="text" className="form-control" id="firstName"
+                                value={partecipantValue.firstName} onChange={handleChangePartecipant} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label htmlFor="lastName" className="form-label">Cognome</label>
+                            <input name="lastName" type="text" className="form-control" id="lastName"
+                                value={partecipantValue.lastName} onChange={handleChangePartecipant} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label htmlFor="taxCode" className="form-label">Codice Fiscale</label>
+                            <input name="taxCode" type="text" className="form-control" id="taxCode"
+                                value={partecipantValue.taxCode} onChange={handleChangePartecipant} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label htmlFor="birthDate" className="form-label">Data di nascita</label>
+                            <input name="birthDate" type="date" className="form-control" id="birthDate"
+                                value={partecipantValue.birthDate} onChange={handleChangePartecipant} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label htmlFor="phone" className="form-label">Cellulare</label>
+                            <input name="phone" type="text" className="form-control" id="phone"
+                                value={partecipantValue.phone} onChange={handleChangePartecipant} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label htmlFor="email" className="form-label">Email</label>
+                            <input name="email" type="text" className="form-control" id="email"
+                                value={partecipantValue.email} onChange={handleChangePartecipant} />
+                        </div>
+
+                        {/* Bottone aggiungi partecipante */}
+                        <button type="button" className="btn btn-primary ms-2" onClick={handleAddPartecipant}><i className="fa-solid fa-square-plus"></i></button>
+                    </div>
+
+                    <div>
+                        <h5>Lista partecipanti:</h5>
+                        <ol>
+                            {
+                                formValue.partecipants.length > 0 && formValue.partecipants.map((curElem) => (
+                                    <li key={curElem.id}>
+                                        {curElem.firstName.toUpperCase()} {curElem.lastName.toUpperCase()}
+                                    </li>
+                                ))
+                            }
+                        </ol>
+                    </div>
+                </div>
+
+                    {/* Submit del form */}
+                    <div className="text-center"><button type="submit" className="btn btn-success">Aggiungi Viaggio</button></div>
+                    
             </form>
         </>
     );

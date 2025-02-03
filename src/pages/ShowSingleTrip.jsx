@@ -15,7 +15,7 @@ function ShowSingleTrip() {
         let users = [];
         trips.forEach(curElem => {
             if (curElem.id === parseFloat(id)) {
-                users = [...curElem.participants];
+                users = [...curElem.partecipants];
             }
         });
         return users;
@@ -40,7 +40,7 @@ function ShowSingleTrip() {
         <>
             <section>
                 <button className="btn" onClick={() => { navigation(-1) }}>Torna indietro</button>
-                <h2 className="text-center">{singleTrip.title}</h2>
+                <h1>Dettagli del viaggio: {singleTrip.title}</h1>
                 <h4 className="pt-2">Rubrica partecipanti</h4>
                 {/* Barra di ricerca */}
                 <div className="pb-4">

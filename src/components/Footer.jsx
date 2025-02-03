@@ -30,9 +30,9 @@ function Footer() {
                     <div className="col-12 col-md-4">
                         <h6 className="my-2" style={{ fontSize: "0.875rem" }}>Follow Us</h6>
                         <ul className="list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
-                            <li><a href="#" className="text-white"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#" className="text-white"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#" className="text-white"><i class="fa-brands fa-square-twitter"></i></a></li>
+                            <li><a href="#" className="text-white"><i className="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#" className="text-white"><i className="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" className="text-white"><i className="fa-brands fa-square-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
