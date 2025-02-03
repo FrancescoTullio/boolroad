@@ -10,7 +10,7 @@ function AddTripPage() {
         departureDate: "",
         arrivalDate: "",
         cover: ""
-    }
+    };
 
     const [formValue, setFormValue] = useState(defaultFormValue);
     const navigation = useNavigate();
@@ -46,7 +46,7 @@ function AddTripPage() {
         trips.push(newFormData)
         setFormValue(defaultFormValue)
         navigation(-1)
-    }
+    };
 
     return (
         <>
@@ -93,6 +93,6 @@ function AddTripPage() {
             </form>
         </>
     );
-}
+};
 
 export default AddTripPage;

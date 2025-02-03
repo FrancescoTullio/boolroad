@@ -4,11 +4,11 @@ function Footer() {
     
   
     return (
-        <footer className="bg-dark text-white py-2">
+        <footer className="text-white py-3">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4">
-                        <h6 className="my-2" style={{ fontSize: "0.875rem" }}>Contact Info</h6>
+                        <h6 className="mb-2" style={{ fontSize: "0.875rem" }}>Contact Info</h6>
                         <ul className="list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
                             {contactInfo.slice(0, 3).map((contact) => (
                                 <li key={contact.id} className="mb-1">
@@ -28,11 +28,11 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="col-12 col-md-4">
-                        <h6 className="my-2" style={{ fontSize: "0.875rem" }}>Follow Us on Social Media</h6>
+                        <h6 className="my-2" style={{ fontSize: "0.875rem" }}>Follow Us</h6>
                         <ul className="list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
-                            <li><a href="#" className="text-white">Facebook</a></li>
-                            <li><a href="#" className="text-white">Instagram</a></li>
-                            <li><a href="#" className="text-white">Twitter</a></li>
+                            <li><a href="#" className="text-white"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#" className="text-white"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" className="text-white"><i class="fa-brands fa-square-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>

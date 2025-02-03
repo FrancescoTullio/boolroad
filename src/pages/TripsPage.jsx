@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 function TripsPage() {
     return (
         <>
-            <section>
-                <h2 className="my-5">Viaggi in corso in questo momento: </h2>
+            <section className="pb-3">
+                <h2 className="my-3">Viaggi in corso in questo momento: </h2>
                 <div className="d-flex justify-content-end py-3">
                     <Link className="btn" to="/trips/create">Aggiungi viaggio</Link>
                 </div>

@@ -34,24 +34,26 @@ function ShowSingleTrip() {
     const users = getUsersByTripId(trips, id);
     const filterUsers = getFilterUsers(users, searchValue);
 
+    const singleTrip = trips.find((curTrip) => curTrip.id == id)
+
     return (
         <>
             <section>
-                <button className="btn mb-3" onClick={() => { navigation(-1) }}>torna alla pagina dei viaggi</button>
-                <h1>{trips.title}</h1>
+                <button className="btn" onClick={() => { navigation(-1) }}>Torna indietro</button>
+                <h2 className="text-center">{singleTrip.title}</h2>
+                <h4 className="pt-2">Rubrica partecipanti</h4>
                 {/* Barra di ricerca */}
-                <div className="py-3">
-                    <label className="form-label" htmlFor="searchUser">Cerca i viaggiatori:</label>
+                <div className="pb-4">
+                    <label className="form-label" htmlFor="searchUser"></label>
                     <input className="form-control"
                         id="searchUser"
                         type="text"
                         name="search"
                         value={searchValue}
-                        placeholder='Cerca i viaggiatori...'
+                        placeholder='Cerca i partecipanti...'
                         onChange={(event) => { setSearchValue(event.target.value) }} />
                 </div>
                 {/* Rubrica partecipanti */}
-                <h3 className="py-3">Rubrica partecipanti</h3>
                 {
                     <div className="accordion" id={parentAccordionId}>
                         {(filterUsers.length > 0 ? filterUsers : users).map((curElem) => (

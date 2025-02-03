@@ -6,11 +6,11 @@ function AppLayout() {
 
     return (
         <>
-            <header>
+            <header className='mb-5'>
                 <Navbar />
-            </header>
+            </header >
 
-            <main className="container py-4">
+            <main className="container my-4">
                 <Outlet />
             </main>
 

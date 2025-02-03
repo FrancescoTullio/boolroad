@@ -21,9 +21,10 @@ const TravelersAccordion = ({ user, parentId }) => {
                 className="accordion-collapse collapse"
                 data-bs-parent={`#${parentId}`}>
                 <div className="accordion-body">
-                    <strong>Nome:</strong> {firstName} <br />
-                    <strong>Cognome:</strong> {lastName} <br />
-                    <strong>Email:</strong> {email}
+                    <p><i className="fa-solid fa-calendar-days"></i> {user.birthDate}</p>
+                    <p><i className="fa-solid fa-envelope"></i> <a href="">{user.email}</a></p> 
+                    <p><i className="fa-solid fa-phone"></i> {user.phone}</p>
+                    <p><i className="fa-solid fa-user"></i> {user.taxCode}</p>
                 </div>
             </div>
         </div>

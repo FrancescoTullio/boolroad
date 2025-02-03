@@ -19,9 +19,12 @@ function Navbar() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg bg-lights">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Boolroad</a>
+                    <div>
+                        <Link className="navbar-brand " to={navlinks[0].path}><span>Bool</span><img src="../../image/logo-boolroad.jpeg" alt="logo" height="50" />
+                            <span>Road</span></Link>
+                    </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
