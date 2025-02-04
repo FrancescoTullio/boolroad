@@ -40,17 +40,18 @@ header {
 
 main {
     flex: 1; /* Occupa tutto lo spazio disponibile */
+    
 }
 
-footer {
-    height: 350px; /* Altezza fissa per il footer */
+footer { 
     background: #343a40;
     color: white;
+    display: flex;
+    align-items: center;
 }
 
 .card-img-overlay {
     background-color: rgba(0, 0, 0, 0.35);
-    /* height: 30%; */
     color: white;
 }
 

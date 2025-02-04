@@ -1,12 +1,12 @@
 const contactInfo = [
     {
         id: 1,
-        type: "Address",
-        value: "Via Roma 123, Milan, Italy",
+        type: "Indirizzo",
+        value: "Via Roma 123, Milano, Italia",
     },
     {
         id: 2,
-        type: "Phone",
+        type: "Telefono",
         value: "+39 012 345 6789",
     },
     {
@@ -16,11 +16,10 @@ const contactInfo = [
     },
     {
         id: 4,
-        type: "Working Hours",
+        type: "Orari",
         value: [
-            { day: "Monday-Friday", hours: "9:00 AM - 6:00 PM" },
-            { day: "Saturday", hours: "9:00 AM - 1:00 PM"},
-            { day: "Sunday", hours: "Closed" },
+            {orario: "Lun-Ven 9:00 - 18:00"},
+            {orario: "Sabato 9:00 - 13:00"},
         ],
     },
 ];

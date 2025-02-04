@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 function TripsPage() {
     return (
         <>
-            <section className="pb-3">
+            <section className="py-2">
                 <div className="d-flex justify-content-end">
-                    <Link className="btn btn-xs" to="/trips/create" style={{color: "#102829"}}>Aggiungi viaggio</Link>
+                    <Link className="btn btn-xs mb-2" to="/trips/create" style={{color: "#102829"}}>Aggiungi viaggio</Link>
                 </div>
                 <h2>Viaggi in corso: </h2>
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-2">

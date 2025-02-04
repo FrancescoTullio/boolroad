@@ -19,7 +19,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-lights">
+            <nav className="navbar navbar-expand-lg bg-lights" style={{ boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
                 <div className="container-fluid">
                     <div>
                         <Link className="navbar-brand " to={navlinks[0].path}><strong>Bool</strong><img src="../../image/logo-boolroad.jpeg" alt="logo" height="50" />
@@ -32,7 +32,7 @@ function Navbar() {
                         <ul className="navbar-nav flex-row">
                             {navlinks.map((curLink, index) => {
                                 return <li key={index} className="nav-item">
-                                    <NavLink className="nav-link me-3" aria-current="page" to={curLink.path}>{curLink.title}</NavLink>
+                                    <NavLink className="nav-link me-4" aria-current="page" to={curLink.path}>{curLink.title}</NavLink>
                                 </li>
                             })}
                         </ul>

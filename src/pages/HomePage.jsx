@@ -20,12 +20,12 @@ function HomePage() {
                         </div>
 
                         {/* Recensioni */}
-                        <section className="py-3">
+                        <section className="py-3 my-3" style={{background: "#549063", borderRadius: 10, boxShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }} >
                             <div className="review-section text-center mt-4">
-                                <h3 style={{ color: "#FFD700" }}>Recensioni dei Viaggiatori</h3>
+                                <h3 style={{ color: "#FFD700", textShadow: "0 4px 6px rgba(0, 0, 0, 0.2)" }}>Recensioni dei Viaggiatori</h3>
                                 <div className="d-flex justify-content-center">
                                     {/* Stelle TripAdvisor */}
-                                    <span style={{ color: "#FFD700", fontSize: "1.5rem" }}>
+                                    <span style={{ color: "#FFD700", fontSize: "1.5rem", textShadow: "0 4px 6px rgba(0, 0, 0, 0.2)" }}>
                                         <i className="fa fa-star"></i>
                                         <i className="fa fa-star"></i>
                                         <i className="fa fa-star"></i>
@@ -33,8 +33,8 @@ function HomePage() {
                                         <i className="fa fa-star"></i>
                                     </span>
                                 </div>
-                                <p className="text-muted">"Un viaggio indimenticabile, tutto perfetto! Esperienza fantastica e servizi eccellenti."</p>
-                                <small>- Cliente Felice</small>
+                                <p style={{color: "white"}}>"Un viaggio indimenticabile, tutto perfetto! Esperienza fantastica e servizi eccellenti."</p>
+                                <small style={{color: "white"}}>- Cliente Felice</small>
                             </div>
                         </section>
 
