@@ -3,22 +3,19 @@ import Navbar from "../components/Navbar";
 import Footer from '../components/Footer';
 
 function AppLayout() {
-
     return (
         <>
-            <header className='mb-5'>
+            <header className='mb-3'>
                 <Navbar />
             </header >
 
-            <main className="container my-4">
+            <main className="container py-4">
                 <Outlet />
             </main>
 
-            <footer>
-                <Footer />
-            </footer>
+            <Footer />
         </>
-    )
+    );
 };
 
 export default AppLayout;

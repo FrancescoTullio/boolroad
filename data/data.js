@@ -1,13 +1,13 @@
 const trips = [
   {
     id: 1,
-    title: "Adventure in Japan",
-    slug: "adventure-in-japan",
+    title: "Japan adventure",
+    slug: "Japan-adventure",
     destination: "Tokyo, Japan",
     departureDate: "2025-04-10",
     arrivalDate: "2025-04-20",
     cover: "japan.jpg",
-    description: "Un viaggio indimenticabile alla scoperta della cultura giapponese, tra modernità e tradizione, templi antichi e grattacieli futuristici.",
+    description: "Un viaggio alla scoperta della cultura giapponese, tra modernità e tradizione, templi antichi e grattacieli futuristici.",
     partecipants: [
       { id: 1, firstName: "Marco", lastName: "Rossi", taxCode: "RSSMRC90A01H501Z", birthDate: "1990-01-01", phone: "+39 333 1234567", email: "marco.rossi@example.com" },
       { id: 2, firstName: "Giulia", lastName: "Bianchi", taxCode: "BNCGLI85C44F205Y", birthDate: "1985-03-04", phone: "+39 331 9876543", email: "giulia.bianchi@example.com" },

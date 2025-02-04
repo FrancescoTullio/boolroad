@@ -6,25 +6,60 @@
 #549063
 #102829
 #2E3B42 
-
-` `
 */
 
-/* Reset */
-*{
+/* Reset base */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Noto Serif Hentaigana", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+ 
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Altezza completa della viewport */
 }
 
 header {
-    height: 10vh;
+    height: 60px; /* Altezza fissa per la navbar */
+    background: white; /* Colore di esempio */
+    color: white;
 }
 
 
+main {
+    flex: 1; /* Occupa tutto lo spazio disponibile */
+}
 
 footer {
-    height: 10rem;
-    width: 100%;
-    background-color: #2E3B42;
+    height: 350px; /* Altezza fissa per il footer */
+    background: #343a40;
+    color: white;
+}
+
+.card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+    /* height: 30%; */
+    color: white;
+}
+
+.list-name {
+    font-size: 0.7rem;
+}
+
+.footerz {
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }

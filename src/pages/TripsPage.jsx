@@ -6,24 +6,24 @@ function TripsPage() {
     return (
         <>
             <section className="pb-3">
-                <h2 className="my-3">Viaggi in corso in questo momento: </h2>
-                <div className="d-flex justify-content-end py-3">
-                    <Link className="btn" to="/trips/create">Aggiungi viaggio</Link>
+                <div className="d-flex justify-content-end">
+                    <Link className="btn btn-xs" to="/trips/create" style={{color: "#102829"}}>Aggiungi viaggio</Link>
                 </div>
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-4">
+                <h2>Viaggi in corso: </h2>
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-2">
                     {trips.map((curTrip) => {
                         return (
-                            <div className='col' key={curTrip.id}>
-                                <TripCard
-                                    trip={curTrip}
-                                />
+                            <div className='col p-4' key={curTrip.id}>
+                                <div className="h-100 d-flex">
+                                    <TripCard trip={curTrip} />
+                                </div>
                             </div>
                         )
                     })}
                 </div>
             </section>
         </>
-    )
-}
+    );
+};
 
 export default TripsPage;

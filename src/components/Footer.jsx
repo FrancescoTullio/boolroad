@@ -2,11 +2,10 @@ import contactInfo from "../../data/footer-array";
 
 function Footer() {
     
-  
     return (
-        <footer className="text-white py-3">
+        <footer className="text-white py-3 text-center">
             <div className="container">
-                <div className="row">
+                <div className="row footerz">
                     <div className="col-12 col-md-4">
                         <h6 className="mb-2" style={{ fontSize: "0.875rem" }}>Contact Info</h6>
                         <ul className="list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
@@ -27,9 +26,9 @@ function Footer() {
                             ))}
                         </ul>
                     </div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-4 ">
                         <h6 className="my-2" style={{ fontSize: "0.875rem" }}>Follow Us</h6>
-                        <ul className="list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
+                        <ul className=" d-flex list-unstyled mb-0" style={{ fontSize: "0.875rem" }}>
                             <li><a href="#" className="text-white"><i className="fa-brands fa-facebook"></i></a></li>
                             <li><a href="#" className="text-white"><i className="fa-brands fa-instagram"></i></a></li>
                             <li><a href="#" className="text-white"><i className="fa-brands fa-square-twitter"></i></a></li>
@@ -39,7 +38,6 @@ function Footer() {
             </div>
         </footer>
     );
-  }
+  };
   
   export default Footer;
-  

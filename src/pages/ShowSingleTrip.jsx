@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 import trips from "../../data/data"
 import TravelersAccordion from "../components/TravelsAccordion";
@@ -39,9 +38,11 @@ function ShowSingleTrip() {
     return (
         <>
             <section>
-                <button className="btn" onClick={() => { navigation(-1) }}>Torna indietro</button>
-                <h1>Dettagli del viaggio: {singleTrip.title}</h1>
-                <h4 className="pt-2">Rubrica partecipanti</h4>
+                <div className="d-flex justify-content-end">
+                    <button className="btn" onClick={() => { navigation(-1) }} style={{ color: "#102829" }}>Torna indietro</button>
+                </div>
+                <h1>{singleTrip.title}</h1>
+
                 {/* Barra di ricerca */}
                 <div className="pb-4">
                     <label className="form-label" htmlFor="searchUser"></label>
@@ -53,6 +54,7 @@ function ShowSingleTrip() {
                         placeholder='Cerca i partecipanti...'
                         onChange={(event) => { setSearchValue(event.target.value) }} />
                 </div>
+                
                 {/* Rubrica partecipanti */}
                 {
                     <div className="accordion" id={parentAccordionId}>

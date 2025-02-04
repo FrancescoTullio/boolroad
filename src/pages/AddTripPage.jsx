@@ -95,7 +95,9 @@ function AddTripPage() {
 
     return (
         <>
-            <button className="btn" onClick={() => navigation(-1)}>Torna ai viaggi</button>
+            <div className="d-flex justify-content-end">
+                <button className="btn" onClick={() => { navigation(-1) }} style={{ color: "#102829" }}>Torna indietro</button>
+            </div>
             <h2 className="py-3">Aggiungi un nuovo viaggio:</h2>
 
             <form onSubmit={handleSubmit}>
@@ -135,7 +137,7 @@ function AddTripPage() {
                 </div>
 
                 {/* PARTECIPANT FORM SECTION */}
-                <h2 className="my-4">Aggiungi partecipanti:</h2>
+                <h2 className="my-4" style={{ color: "#102829" }}>Aggiungi partecipanti:</h2>
 
                 <div className="row row-cols-1 row-cols-2">
                     <div className="my-2">
@@ -176,7 +178,7 @@ function AddTripPage() {
                         </div>
 
                         {/* Bottone aggiungi partecipante */}
-                        <button type="button" className="btn btn-primary ms-2" onClick={handleAddPartecipant}><i className="fa-solid fa-square-plus"></i></button>
+                        <button type="button" className="btn btn-sm w-100 mb-3" style={{ background: "#12A6DB", color: "white" }} onClick={handleAddPartecipant}><strong>Nuovo partecipante</strong></button>
                     </div>
 
                     <div>
@@ -185,7 +187,9 @@ function AddTripPage() {
                             {
                                 formValue.partecipants.length > 0 && formValue.partecipants.map((curElem) => (
                                     <li key={curElem.id}>
-                                        {curElem.firstName.toUpperCase()} {curElem.lastName.toUpperCase()}
+                                        <p className="list-name">
+                                            {curElem.firstName.toUpperCase()} {curElem.lastName.toUpperCase()}
+                                        </p>
                                     </li>
                                 ))
                             }
@@ -193,9 +197,9 @@ function AddTripPage() {
                     </div>
                 </div>
 
-                    {/* Submit del form */}
-                    <div className="text-center"><button type="submit" className="btn btn-success">Aggiungi Viaggio</button></div>
-                    
+                {/* Submit del form */}
+                <div className="text-center"><button type="submit" className="btn" style={{ background: "#549063", color: "white" }}>Aggiungi viaggio</button></div>
+
             </form>
         </>
     );
